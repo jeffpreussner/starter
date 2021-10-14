@@ -17,12 +17,24 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test"
+    "test": "craco test",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -49,6 +61,16 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.2.0",
-    "stylelint-webpack-plugin": "^3.0.1"
+    "stylelint-webpack-plugin": "^3.0.1",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.3.11",
+    "@storybook/addon-docs": "^6.3.11",
+    "@storybook/addon-essentials": "^6.3.11",
+    "@storybook/addon-links": "^6.3.11",
+    "@storybook/node-logger": "^6.3.11",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.11",
+    "@whitespace/storybook-addon-html": "^5.0.0",
+    "storybook-addon-themes": "^6.1.0"
   }
 }
