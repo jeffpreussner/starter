@@ -1,7 +1,9 @@
 // craco.config.js
+
+const path = require("path");
 const CracoEsbuildPlugin = require("craco-esbuild");
 const StyleLintPlugin = require("stylelint-webpack-plugin");
-const path = require("path");
+const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 
 module.exports = {
   plugins: [
@@ -62,6 +64,19 @@ module.exports = {
           configBasedir: __dirname,
           context: path.resolve(__dirname, "src"),
           files: ["**/*.css", "**/*.scss"],
+        }),
+        new HtmlCriticalWebpackPlugin({
+          base: path.resolve(__dirname, "build"),
+          src: "index.html",
+          dest: "index.html",
+          inline: true,
+          minify: true,
+          extract: true,
+          width: 375,
+          height: 565,
+          penthouse: {
+            blockJSRequests: false,
+          },
         }),
       ],
     },
