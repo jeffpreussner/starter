@@ -4,6 +4,7 @@ const path = require("path");
 const CracoEsbuildPlugin = require("craco-esbuild");
 const StyleLintPlugin = require("stylelint-webpack-plugin");
 const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
+const { whenProd } = require("@craco/craco");
 
 module.exports = {
   plugins: [
@@ -65,19 +66,25 @@ module.exports = {
           context: path.resolve(__dirname, "src"),
           files: ["**/*.css", "**/*.scss"],
         }),
-        new HtmlCriticalWebpackPlugin({
-          base: path.resolve(__dirname, "build"),
-          src: "index.html",
-          dest: "index.html",
-          inline: true,
-          minify: true,
-          extract: true,
-          width: 375,
-          height: 565,
-          penthouse: {
-            blockJSRequests: false,
-          },
-        }),
+        //TODO: How is this working?
+        ...whenProd(
+          () => [
+            new HtmlCriticalWebpackPlugin({
+              base: path.resolve(__dirname, "build"),
+              src: "index.html",
+              dest: "index.html",
+              inline: true,
+              minify: true,
+              extract: true,
+              width: 375,
+              height: 565,
+              penthouse: {
+                blockJSRequests: false,
+              },
+            }),
+          ],
+          [],
+        ),
       ],
     },
   },
