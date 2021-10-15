@@ -3,10 +3,25 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-console.log("testing");
+/* Plop Imports */
+import StandardPromo from "./components/StandardPromo/StandardPromo";
+import SponsorBanner from "./components/SponsorBanner/SponsorBanner";
+import LinkInterupter from "./components/LinkInterupter/LinkInterupter";
+import BackToTop from "./components/BackToTop/BackToTop";
+import AccordionPromo from "./components/AccordionPromo/AccordionPromo";
+import InfographicPromo from "./components/InfographicPromo/InfographicPromo";
+import Image from "./components/Image/Image";
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <StandardPromo />
+    <SponsorBanner />
+    <LinkInterupter />
+    <BackToTop />
+    <AccordionPromo />
+    <InfographicPromo />
+    <Image />
   </React.StrictMode>,
   document.getElementById("root"),
 );

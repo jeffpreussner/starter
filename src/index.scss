@@ -1,14 +1,10 @@
-body {
-  margin: 0;
+@import "./scss/general.scss";
 
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+/* Plop Imports */
+@import "./components/StandardPromo/standard-promo.scss";
+@import "./components/SponsorBanner/sponsor-banner.scss";
+@import "./components/LinkInterupter/link-interupter.scss";
+@import "./components/BackToTop/back-to-top.scss";
+@import "./components/AccordionPromo/accordion-promo.scss";
+@import "./components/InfographicPromo/infographic-promo.scss";
+@import "./components/Image/image.scss";

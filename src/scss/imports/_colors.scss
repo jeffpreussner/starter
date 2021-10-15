@@ -1,0 +1,19 @@
+// colors defined in abstract
+// https://app.abstract.com/projects/00264e63-1ad3-4371-a6c8-5d2b658e31c4/branches/master/commits/26fb98896838f6025761d8d5b25326af46eb700a/files/33c0b204-b7f6-49ed-ab1f-fc8871808d83/layers/46C88E1F-1D62-4D6D-8318-D5768D3EABC0?collectionId=1197f933-2432-4e27-a1dc-eb254f2b6c30&collectionLayerId=9200e4f6-4454-4aa6-b3d0-60e877ce7c83&mode=build&selected=root-2B52052A-F2A6-4997-AF4A-46E0E8E5D202
+
+$c-purple: #7300e7; // rgb(115, 0, 231);
+$c-purple-light: lighten($c-purple, 10%);
+$c-purple-dark: darken($c-purple, 10%);
+
+$c-turquoise: #56d5e6; // rgb(86, 213, 230);
+$c-turquoise-light: lighten($c-turquoise, 10%);
+$c-turquoise-dark: #0480a9;
+
+$c-tomato: #f7453d;
+$c-error-red: #ec7572;
+
+// base colors
+$black: #000;
+$white: #fff;
+$grey: #7d7d7d;
+// linear-gradient(154.06deg, #B32D77 -10.15%, #470C68 67.49%);

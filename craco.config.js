@@ -59,6 +59,13 @@ module.exports = {
     },
   },
   webpack: {
+    rules: [
+      {
+        test: /\.scss$/,
+        loaders: ["style-loader", "css-loader", "sass-loader"],
+        include: path.resolve(__dirname, "src"),
+      },
+    ],
     plugins: {
       add: [
         new StyleLintPlugin({

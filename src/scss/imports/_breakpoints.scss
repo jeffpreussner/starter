@@ -1,0 +1,17 @@
+@import "./_variables.scss";
+
+// to be used with min-width (preferred over max-width to be "mobile first")
+// @media (min-width: $bp-small-min) { ... }
+$bp-x-small-min: 470px;
+$bp-small-min: 680px;
+$bp-medium-min: 746px;
+$bp-large-min: 910px;
+$bp-x-large-min: $max-width + (2 * $container-gutter);
+
+// to be used with max-width (avoid max-with in favor of min-width)
+// @media (max-width: $bp-small-max) { ... }
+$bp-x-small-max: ($bp-x-small-min - 1);
+$bp-small-max: ($bp-small-min - 1);
+$bp-medium-max: ($bp-medium-min - 1);
+$bp-large-max: ($bp-large-min - 1);
+$bp-x-large-max: ($bp-x-large-min - 1);

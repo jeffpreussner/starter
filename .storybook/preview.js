@@ -1,4 +1,5 @@
 // .storybook/preview.js
+import "../src/index.scss";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -9,3 +10,4 @@ export const parameters = {
     },
   },
 };
+// https://use.typekit.net/sul5jci.css
